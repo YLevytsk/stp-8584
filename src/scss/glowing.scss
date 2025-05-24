@@ -77,3 +77,22 @@
   overflow: hidden;
   position: relative;
 }
+.animated-star {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: none;
+}
+
+@keyframes fly-fall {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0.5) rotate(var(--r));
+    opacity: 0;
+  }
+}
