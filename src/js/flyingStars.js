@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Автоматическое определение base path
   const repo = window.location.hostname === 'localhost' ? '' : `/${window.location.pathname.split('/')[1]}`;
-  const svgPath = `${repo}/img/green-star.svg`;
+  const svgPath = `${repo}/green-star.svg`; // исправлено: svg лежит в public/, не в img/
 
   fetch(svgPath)
     .then((res) => {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         star.style.position = 'absolute';
         star.style.left = `${20 + Math.random() * 60}%`;
         star.style.top = `0`;
-        star.style.transform = 'translate(-50%, -50%)';
+        star.style.transform = 'translate(-50%, -50%)`;
 
         // Анимация
         const x1 = (Math.random() - 0.5) * 500;
@@ -75,4 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('❌ Ошибка загрузки SVG:', err);
     });
 });
+
 
