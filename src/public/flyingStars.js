@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Автоматическое определение base path
-  const repo = window.location.hostname === 'localhost' ? '' : `/${window.location.pathname.split('/')[1]}`;
-  const svgPath = `${repo}/img/green-star.svg`;
+// Автоматическое определение base path
+const base = location.hostname === 'localhost' ? '' : `/${location.pathname.split('/')[1]}`;
+const svgPath = `${base}/img/green-star.svg`;
 
-  fetch(svgPath)
+fetch(svgPath)
     .then((res) => {
       console.log('📦 fetch статус:', res.status);
       if (!res.ok) {
