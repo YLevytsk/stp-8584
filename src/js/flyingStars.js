@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         star.style.position = 'absolute';
         star.style.left = `${20 + Math.random() * 60}%`;
         star.style.top = `0`;
-        star.style.transform = 'translate(-50%, -50%)`;
+        star.style.transform = 'translate(-50%, -50%)';
 
         // Анимация
         const x1 = (Math.random() - 0.5) * 500;
